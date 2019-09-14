@@ -2,7 +2,8 @@ class Config:
     '''
     General configuration parent class
     '''
-    pass
+    SOURCE_API_BASE_URL ='https://newsapi.org/v2/sources?apiKey=4e8b4663595f427a81d5dae7bbd2dc39/{}?api_key={}'
+    ARTICLES_API_BASE_URL ='https://newsapi.org/v2/everything?q=bitcoin&apiKey=4e8b4663595f427a81d5dae7bbd2dc39/{}?api_key={}'
 
 
 
