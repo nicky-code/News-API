@@ -99,3 +99,4 @@ def process_results(newsAricle_list)
 
     return newsA_results
 
+
