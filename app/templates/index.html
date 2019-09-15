@@ -1,3 +1,6 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,59 +11,44 @@
         <title> Welcome to the best News Review website </title>
         {% endif %}
     </head>
-    
-    {% import 'macros.html' as macro%}
 
-    <body>
-        <!-- Popular news source section  -->
-        <h3> Popular News_Source</h3>
+<!-- Content block -->
+{% block content %}
+
+<!-- Popular news source section  -->
+<h3> Popular News_Source</h3>
          
-        <ul>
-            {% for popular_newsSource in popular %}
-                <li>{{ popular_newsSource.title}}</li>
-            {% endfor %}
-        </ul>
+<ul>
+    {{ macro.displayNewsSourcesList(popular)}}
+</ul>
 
-        <!-- Upcoming newsSource  -->
-        <h3> Upcoming Source </h3>
-        <ul>
-            {% for upcoming_newsSource in upcoming %}
-                <li>{{ upcoming_newsSource.title}}</li>
-            {% endfor %}
-        </ul>
-        <!-- Now showing newsSource -->
-        <h3>Now Showing Source</h3>
-        <ul>
-            {% for now_showing_newsSource in now_showing %}
-                <li>{{ now_showing_newsSource.title}}</li>
-            {% endfor %}
-        </ul>
+<!-- Upcoming newsSource  -->
+<h3> Upcoming Source </h3>
+<ul>
+    {{ macro.displayNewsSourcesList(upcoming)}}
+</ul>
+<!-- Now showing newsSource -->
+<h3>Now Showing Source</h3>
+<ul>
+    {{ macro.displayNewsSourcesList(now_showing)}}
+</ul>
 
-        <!-- Popular news articles section  -->
-        <h3> Popular News_Articles</h3>
+<!-- Popular news articles section  -->
+<h3> Popular News_Articles</h3>
 
-        <ul>
-            {% for popular_newsArticles in popular %}
-                <li>{{ popular_newsArticles.title}}</li>
-            {% endfor %}
-        </ul>
+<ul>
+    {{ macro.displayNewsArticleList(popular)}}
+</ul>
 
-        <!-- Upcoming newsArticles  -->
-        <h3> Upcoming Articles </h3>
-        <ul>
-            {% for upcoming_newsArticles in upcoming %}
-                <li>{{ upcoming_newsArticles.title}}</li>
-            {% endfor %}
-        </ul>
-        <!-- Now showing newsArticles -->
-        <h3>Now Showing Articles</h3>
-        <ul>
-            {% for now_showing_newsArticles in now_showing %}
-                <li>{{ now_showing_newsArticles.title}}</li>
-            {% endfor %}
-        </ul>
+<!-- Upcoming newsArticles  -->
+<h3> Upcoming Articles </h3>
+<ul>
+{{ macro.displayNewsArticleList(upcoming)}}
+</ul>
+<!-- Now showing newsArticles -->
+<h3>Now Showing Articles</h3>
+<ul>
+    {{ macro.displayNewsArticleList(now_showing)}}
+</ul>
 
-        
-
-    </body>
-</html>
+{% endblock%}
