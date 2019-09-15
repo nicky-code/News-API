@@ -69,8 +69,8 @@ def process_results(newsSources_list)
         url = news_item.get('url')
         
         if url:
-            news_object = News(id,name,description,url)
-            newsS_results.append(news_object)
+            newsSour_object = News(id,name,description,url)
+            newsS_results.append(newsSour_object)
 
     return newsS_results
 
@@ -94,8 +94,8 @@ def process_results(newsAricle_list)
         publishedAt = news_item.get('publishedAt')
         
         if url:
-            news_object = News(author,title,description,url,publishedAt)
-            newsA_results.append(news_object)
+            newsArt_object = News(author,title,description,url,publishedAt)
+            newsA_results.append(newsArt_object)
 
     return newsA_results
 
