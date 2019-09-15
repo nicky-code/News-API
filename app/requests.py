@@ -100,3 +100,41 @@ def process_results(newsAricle_list)
     return newsA_results
 
 
+def get_newsSource(id):
+    get_newsSource_details_url = source_base_url.format(id,api_key)
+
+    with urllib.requests.urlopen(get_newsSource_details_url) as url:
+        newsSource_details_data = url.read()
+        newsSource_details_response = json.loads(newsSource_details_data)
+
+        newsSour_object = None
+        if newsSource_details_response:
+            id = newsSource_details_response.get('id')
+            name = newsSource_details_response.get('original_name')
+            description = newsSource_details_response.get('description')
+            url = newsSource_details_response.get('url')
+            newsSour_object = News(id,name,description,url)
+
+    return newsSour_object
+
+
+def get_newsArticles(id):
+    get_newsArticles_details_url = articles_base_url.format(id,api_key)
+
+    with urllib.requests.urlopen(get_newsArticles_details_url) as url:
+        newsArticles_details_data = url.read()
+        newsArticles_details_response = json.loads(newsArticles_details_data)
+
+        newsArt_object = None
+        if newsArticles_details_response:
+            author = newsArticles_details_response.get('author')
+            title = newsArticles_details_response.get('original_title')
+            description = newsArticles_details_response.get('description')
+            url = newsArticles_details_response.get('url')
+            publishedAt = newsArticles_details_response.get('publishedAt')
+            newsArt_object = News(author,title,description,url,publishedAt)
+
+    return newsArt_object
+
+
+
