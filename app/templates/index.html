@@ -11,40 +11,23 @@
 <!-- Content block -->
 {% block content %}
 
-<!-- Popular news source section  -->
-<h3> Popular News_Source</h3>
+<!-- Business news source section  -->
+<h3> Business News_Source</h3>
          
 <ul>
-    {{ macro.displayNewsSourcesList(popular)}}
+    {{ macro.displayNewsSourcesList(business)}}
 </ul>
 
-<!-- Upcoming newsSource  -->
-<h3> Upcoming Source </h3>
+<!-- Entertainment newsSource  -->
+<h3> Entertainment Source </h3>
 <ul>
-    {{ macro.displayNewsSourcesList(upcoming)}}
+    {{ macro.displayNewsSourcesList(entertainment)}}
 </ul>
-<!-- Now showing newsSource -->
-<h3>Now Showing Source</h3>
+<!-- General newsSource -->
+<h3>General Source</h3>
 <ul>
-    {{ macro.displayNewsSourcesList(now_showing)}}
-</ul>
-
-<!-- Popular news articles section  -->
-<h3> Popular News_Articles</h3>
-
-<ul>
-    {{ macro.displayNewsArticleList(popular)}}
+    {{ macro.displayNewsSourcesList(general)}}
 </ul>
 
-<!-- Upcoming newsArticles  -->
-<h3> Upcoming Articles </h3>
-<ul>
-{{ macro.displayNewsArticleList(upcoming)}}
-</ul>
-<!-- Now showing newsArticles -->
-<h3>Now Showing Articles</h3>
-<ul>
-    {{ macro.displayNewsArticleList(now_showing)}}
-</ul>
 
 {% endblock%}

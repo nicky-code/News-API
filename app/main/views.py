@@ -1,7 +1,7 @@
 from flask import render_template
 from . import main
-from .requests import get_newsSource,get_newsSources
-from .requests import get_newsArticles,get_newsArticle
+from ..requests import get_newsSource,get_newsArticles
+
 
 
 
@@ -13,21 +13,14 @@ def index():
     View root page function that returns the index page and its data
     '''
     # Getting popular news_source 
-    popular_newsSource = get_newsSource('popular')
-    upcoming_newsSource = get_newsSource('upcoming')
-    now_showing_newsSource = get_newsSource('now_reading')
-    
+    business_newsSource = get_newsSource('business')
+    entertainment_newsSource = get_newsSource('entertainment')
+    general_newsSource = get_newsSource('general')
     title = 'Home - Welcome to The best News_Source Review Website Online'
     
-    return render_template('index.html', title = title, popular = popular_newsSource, upcoming = upcoming_newsSource, now_showing = now_showing_newsSource)
+    return render_template('index.html', title = title, business = business_newsSource, entertainment  = entertainment_newsSource, general = general_newsSource)
 
-    # Getting popular news_articles
-    popular_newsArticles = get_newsArticles('popular')
-    upcoming_newsArticles = get_newsArticles('upcoming')
-    now_showing_newsArticles = get_newsArticles('now_reading')
     
-    title = 'Home - Welcome to The best News_Articles Review Website Online'
-    return render_template('index.html', title = title, popular = popular_newsArticles, upcoming = upcoming_newsArticles, now_showing = now_showing_newsArticles)
     
 @main.route('/news/<int:news_id>')
 def news(news_id):
@@ -45,7 +38,7 @@ def newsSources(id):
     '''
     View newsSources page function that returns the newsSources details page and its data
     '''
-    newsSources = get_newsSources(id)
+    newsSources = get_newsSource(id)
     title = f'{newsSources.title}'
 
     return render_template('news.html',title = title, newsSources = newsSources)

@@ -4,20 +4,13 @@
         <li>{{ newsSour.title}}</li>
 
         <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 newsSources-card">
-            <img src="{{ newsSources.url }}" alt="{{ newsSources.title }} url" class="img-responsive">
+            <img src="{{newsSour.url }}" alt="{{ newsSour.name }} url" class="img-responsive">
             <li class="text-center">
-                <a href="/news/{{newsSources.id}}">
-                    {{ newsSources.title|truncate(10)}}</a>
+                <a href="/news/{{newsSour.id}}">
+                    {{ newsSour.id|truncate(10)}}</a>
             </li>
         </div>
     {% endfor %}
 
 {% endmacro %}
 
-<!-- {% macro displayNewsArticleList(newsArticle_list) %}
-
-    {% for newsArt in newsArticle_list %}
-        <li>{{ newsArt.title}}</li>
-    {% endfor %}
-
-{% endmacro %} -->
