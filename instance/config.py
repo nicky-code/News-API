@@ -1,1 +1,2 @@
 NEWS_API_KEY = '4e8b4663595f427a81d5dae7bbd2dc39'
+SECRET_KEY = 'santa7'

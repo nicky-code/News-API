@@ -1,12 +1,12 @@
 from flask import render_template
-from app import app
+from . import main
 from .requests import get_newsSource,get_newsSources
 from .requests import get_newsArticles,get_newsArticle
 
 
 
 # Views
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -29,7 +29,7 @@ def index():
     title = 'Home - Welcome to The best News_Articles Review Website Online'
     return render_template('index.html', title = title, popular = popular_newsArticles, upcoming = upcoming_newsArticles, now_showing = now_showing_newsArticles)
     
-@app.route('/news/<int:news_id>')
+@main.route('/news/<int:news_id>')
 def news(news_id):
 
     '''
@@ -38,7 +38,7 @@ def news(news_id):
     return render_template('index.html',id = news_id)
 
 
-@app.route('/newsSources/<int:id>')
+@main.route('/newsSources/<int:id>')
 def newsSources(id):
 
 
