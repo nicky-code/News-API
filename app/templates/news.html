@@ -1,11 +1,22 @@
 {% extends 'base.html'%}
-{% import 'macros.html' as macro%}
-
 <!-- Content block -->
 {% block content %}
+<div class="container">
 
+    <!-- urlToImage background -->
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 urlToImage" style="background: url({{newsArticle.urlToImage}}) no-repeat center center">
+        </div>
 
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 newsArticle-details">
+            <h3>{{ newsArticle.title }}</h3>
 
+            <p class="author"> {{ newsArticle.author }}</p>
 
+            <p class="details"> <b> {{ newsArticle.description }}</b> - <i>{{ newsArticle.publishedAt}} votes </i> </p>
 
-{% endblock%}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
