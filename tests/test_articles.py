@@ -11,7 +11,7 @@ class ArticlesTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_news = Articles(1234,'Python Must Be Crazy','A thrilling new Python Series','https://image.tmdb.org/t/p/w500/khsjha27hbs',8.5,129993)
+        self.new_news = Articles('Jennings Brown','Man Claims He Invented Bitcoin','A man who has insisted he is the man behind the pseudonymous identity of Satoshi Nakamoto','https://i.kinja-img.com/gawker-media/image/upload/s--H8pqYMUW--/c_fill,fl_progressive,g_center,h_900,q_80,w_1600/ug34lxszlekl8efydtj3.png','2019-08-28T16:50:00Z')
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_news,Articles))
