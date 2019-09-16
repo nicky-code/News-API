@@ -8,3 +8,6 @@ I also install the bootstrap to help me for the styling.
 
 ## Code scaffolding
 Run python3.6 manage.py server when you want to implement the features we have just have been testing.
+
+## Running unittests
+Run python3.6 plus test file where you are adding the test function.
