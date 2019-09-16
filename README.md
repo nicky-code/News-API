@@ -28,4 +28,12 @@ We want our application to:
 the user will be able to see all the informations inputed after displaying them.
 
 ## TDD
-I test my project using Python3.6
+I test my project using Python3.6 plus a test filename.
+
+## Setup/Installation Requirements
+1.Your project should contain two models, one for the news source and one for the news article.
+2.Your project must use views and routes.
+3.Your project should consume the News API.
+4.Your project must contain request(s) to the News API.
+5.Your project should follow the proper folder structure.
+6.Your application should be deployed to Heroku.
