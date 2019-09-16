@@ -37,3 +37,9 @@ I test my project using Python3.6 plus a test filename.
 4.Your project must contain request(s) to the News API.
 5.Your project should follow the proper folder structure.
 6.Your application should be deployed to Heroku.
+7.The project should have a specs markdown file that displays the project's specifications.
+8.The model classes should have unittests to check for behaviour. The tests should pass.
+9.The project should have clear commit messages.
+10.The project should be polished in a portfolio-quality state
+
+
