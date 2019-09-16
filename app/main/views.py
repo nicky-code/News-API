@@ -31,15 +31,15 @@ def news(news_id):
     return render_template('index.html',id = news_id)
 
 
-@main.route('/newsSources/<int:id>')
+@main.route('/newsSources/<id>')
 def newsSources(id):
 
 
     '''
     View newsSources page function that returns the newsSources details page and its data
     '''
-    newsSources = get_newsSource(id)
-    title = f'{newsSources.title}'
+    newsSources = get_newsArticles(id)
+    # title = f'{newsSources.title}'
 
-    return render_template('news.html',title = title, newsSources = newsSources)
+    return render_template('news.html', newsSources = newsSources)
 
