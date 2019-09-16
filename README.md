@@ -11,3 +11,12 @@ Run python3.6 manage.py server when you want to implement the features we have j
 
 ## Running unittests
 Run python3.6 plus test file where you are adding the test function.
+
+## BDD
+### Behaviour
+We want our application to:
+
+1. we want that our user to see various news sources on the homepage of the application.
+2. User would also select news source and see all news articles from the selected news source in the application.
+3. User would be able to see the image,description and time a news article was created.
+4. User would want to click on an article and read the full article on the source website.
