@@ -21,9 +21,6 @@ We want our application to:
 3. User would be able to see the image,description and time a news article was created.
 4. User would want to click on an article and read the full article on the source website.
 
-## Input Examples
-
-
 ## Output Examples
 the user will be able to see all the informations inputed after displaying them.
 
