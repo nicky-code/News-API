@@ -42,4 +42,14 @@ I test my project using Python3.6 plus a test filename.
 9.The project should have clear commit messages.
 10.The project should be polished in a portfolio-quality state
 
+## Technology used
+Python3.6 ,Visual Studio Code as text-Editor, Terminal,Flask framework,Bootstrap
+
+## My link repository
+
+## Contact me on aline.nicole7@gmail.com
+## Title Licence
+Copyright(c)2019 Aline Nicole UWAMARIYA
+
+
 
